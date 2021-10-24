@@ -1,0 +1,27 @@
+{
+  "name": "compassouol",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "pm2 --name server start ./bin/server.js",
+    "restart": "pm2 restart server",
+    "stop": "pm2 del server",
+    "test": "nodemon ./bin/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.13.0",
+    "fs": "0.0.1-security",
+    "http": "0.0.1-security",
+    "jsontoxml": "^1.0.1",
+    "mysql2": "^2.3.2",
+    "nodemon": "^2.0.14",
+    "pm2": "^5.1.2",
+    "sequelize": "^6.7.0",
+    "sequelize-cli": "^6.2.0"
+  }
+}
