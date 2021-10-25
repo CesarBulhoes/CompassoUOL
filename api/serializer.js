@@ -5,7 +5,7 @@ class Serializer {
     json(data, count = null) {
 
         let result = {}
-console.log(count)
+
         if(count) {
             result.count = count
             result[this.tagPlural] = data
@@ -57,17 +57,12 @@ console.log(count)
         else if(Array.isArray(data))  data = this.filter(data[0])
         else data = this.filter(data)
 
-        if(this.contentType === 'application/json') {
-
-            return this.json(data, count)
-        }
-
         if(this.contentType === 'application/xml') {
 
             return this.xml(data, count)
         }
 
-        // return this.filter(data)
+        return this.json(data, count)  
     }
 
     filter(data) {

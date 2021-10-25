@@ -13,6 +13,13 @@ Configure the ".env" file with the server port and your database configuration.
 Finally run "npm test" to start the server running in Nodemon module. Or "npm start" to run using PM2 module.  
    
 # API Usage  
+
+## Headers  
+
+It is possible to receive json or xml responses. "*/*" will be replaced by "application/json".
+  
+Accept: */* || application/json || application/xml  
+Content-type: application/json  
   
 ## Get All  
   
